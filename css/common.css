@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: 'SUIT', 'Spoqa Han Sans', 'Sans-serif';
+  word-break: break-all;
+}
