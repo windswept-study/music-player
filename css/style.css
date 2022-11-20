@@ -1,2 +1,254 @@
 @import 'reset.css';
 @import 'common.css';
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.list-screen {
+  margin-right: 80px;
+  width: 275px;
+  height: 600px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+
+.list-screen header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#singer-profile {
+  width: 235px;
+  height: 544px;
+  justify-content: center;
+  text-align: center;
+}
+
+.singer-photo {
+  margin: 15px 0px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 3px 20px 2px #66fff0;
+}
+
+.singer-name {
+  font-size: large;
+  font-weight: 800;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.info-genre {
+  font-size: 12px;
+  color: #00000080;
+  font-weight: 500;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+#button-left {
+  margin: 10px 0px;
+  color: black;
+  font-size: 16px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.shuffle {
+  color: white;
+  width: 90px;
+  height: 30px;
+  background-color: black;
+  margin: 0px 10px 0px 0px;
+  border-radius: 25px;
+  box-shadow: 0px 1px 1px 1px grey;
+}
+
+.likes {
+  width: 90px;
+  height: 30px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 1px 1px 1px grey;
+}
+
+/* 좋아요 애니메이션 */
+.fa-heart {
+  animation-name: hearts;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes hearts {
+  0% {
+    color: #ff0000;
+  }
+  25% {
+    color: rgb(236, 50, 81);
+  }
+  50% {
+    color: rgb(245, 85, 111);
+  }
+  75% {
+    color: rgb(241, 136, 153);
+  }
+  100% {
+    color: white;
+  }
+}
+
+#song-list {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.song-card {
+  margin: 10px;
+  padding: 15px;
+  width: 215px;
+  height: 50px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 900;
+}
+.song-distance {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.song-info .fa-ellipsis-vertical {
+  width: 6px;
+  height: 16px;
+}
+
+.album {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#song-list .song-card .song-info p {
+  font-size: 10px;
+  color: #00000080;
+  font-weight: 500;
+}
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#play-button {
+  padding: 10px 15px;
+  width: 100%;
+  height: 45px;
+  background-color: black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#playSongName {
+  font-size: 12px;
+  color: white;
+}
+#playSongName,
+span {
+  align-items: center;
+}
+.play-button-menu {
+  width: 35%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fa-solid.fa-play {
+  width: 14px;
+  height: 16px;
+}
+
+.main-screen {
+  width: 275px;
+  height: 600px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+
+.main-screen header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.playing-screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.playing-album {
+  margin: 50px 0px;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 20px 2px #2bff40;
+}
+
+.playing-music {
+  margin: 10px 0px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.play-range {
+  margin: 40px 0px;
+}
+
+.music-range {
+  width: 100%;
+  height: 8px;
+  /* 적용안됌 */
+  background: rgba(0, 0, 0, 0.07);
+  outline: none;
+  overflow: hidden;
+}
+
+.play-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: grey;
+}
+
+.main-play-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
