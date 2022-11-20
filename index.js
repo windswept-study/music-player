@@ -7,9 +7,9 @@ document.querySelector('.btn1').addEventListener('click', function () {
   audio1.play(); // "#.mp3 재생"
 });
 // 음악 클릭시 음악이름 출력
-const btn1Click = document.getElementById('playSongName');
+const btn1Click = document.getElementById('play-song-name');
 function btn1Click(onclick) {
-  console.log((document.getElementById('playSongName').innerHTML = '200%'));
+  console.log((document.getElementById('play-song-name').innerHTML = '200%'));
 }
 */
 

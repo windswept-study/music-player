@@ -173,11 +173,11 @@ body {
   justify-content: space-between;
 }
 
-#playSongName {
+#play-song-name {
   font-size: 12px;
   color: white;
 }
-#playSongName,
+#play-song-name,
 span {
   align-items: center;
 }
