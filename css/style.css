@@ -1,5 +1,7 @@
 @import 'reset.css';
 @import 'common.css';
+@import 'animation.css';
+@import 'var-style.css';
 
 body {
   width: 100vw;
@@ -26,7 +28,7 @@ body {
   padding: 30px 20px;
 }
 
-.list-screen header {
+.list-screen-header {
   display: flex;
   justify-content: space-between;
 }
@@ -82,33 +84,6 @@ body {
   background-color: white;
   border-radius: 25px;
   box-shadow: 0px 1px 1px 1px grey;
-}
-
-/* 좋아요 애니메이션 */
-.fa-heart {
-  animation-name: hearts;
-  animation-duration: 1.5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes hearts {
-  0% {
-    color: #ff0000;
-  }
-  25% {
-    color: rgb(236, 50, 81);
-  }
-  50% {
-    color: rgb(245, 85, 111);
-  }
-  75% {
-    color: rgb(241, 136, 153);
-  }
-  100% {
-    color: white;
-  }
 }
 
 #song-list {
@@ -173,10 +148,11 @@ body {
   justify-content: space-between;
 }
 
-#play-song-name {
-  font-size: 12px;
+.playing-song-name {
   color: white;
+  margin-left: 15px;
 }
+
 #play-song-name,
 span {
   align-items: center;
@@ -201,7 +177,7 @@ span {
   padding: 30px 20px;
 }
 
-.main-screen header {
+.main-screen-header {
   display: flex;
   justify-content: space-between;
 }

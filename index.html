@@ -20,101 +20,74 @@
   </head>
 
   <body>
-    <!-- 왼쪽 카드 -->
     <div class="list-screen">
-      <!-- 왼쪽 헤더 -->
-      <header>
+      <div class="list-screen-header">
         <i class="fas fa-arrow-left"> </i>
         <i class="fas fa-search"> </i>
-      </header>
-
-      <!-- 왼쪽 메인  -->
+      </div>
       <div id="singer-profile">
-        <!-- 가수 사진 -->
-
         <img class="singer-photo" src="img/singer.jpg" />
-
-        <!-- 가수 이름 -->
         <h1 class="singer-name">AKMU, Duet of bro and sis</h1>
-
-        <!-- 장르 -->
         <div class="info-genre">
           <p>Acoustic, R&B, Dance</p>
         </div>
-
-        <!-- 셔플 버튼, 좋아요b -->
         <div id="button-left">
           <button class="shuffle">
             <i class="fa-solid fa-shuffle"></i> shuffle
           </button>
           <a href="#">
             <button class="likes">
-              <i class="fa-solid fa-heart" style="animation-name: hearts"></i>
+              <i class="fa-solid fa-heart"></i>
               43.5M
             </button>
           </a>
         </div>
-        <!-- 음악리스트 -->
         <div id="song-list">
-          <div class="song-card" onclick="btnClick()">
+          <div class="song-card" onclick="btnClickFirst()">
             <img class="album" src="/img/album1.jpeg" />
             <div class="song-distance">
-              <div class="songInfo">
+              <div class="song-info">
                 <p>AKMU</p>
-                <span id="songName">200%</span>
+                <span id="song-name-1st">200%</span>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical fa-2x"
-                style="color: grey"
-              ></i>
+              <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </div>
 
-          <div class="song-card">
+          <div class="song-card" onclick="btnClickSecond()">
             <img class="album" src="img/album4.jpeg" />
             <div class="song-distance">
-              <div class="songInfo">
+              <div class="song-info">
                 <p>AKMU</p>
-                <span>오랜 날 오랜 밤</span>
+                <span id="song-name-2nd">오랜 날 오랜 밤</span>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical fa-2x"
-                style="color: grey"
-              ></i>
+              <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </div>
-
-          <div class="song-card">
+          <div class="song-card" onclick="btnClickThird()">
             <img class="album" src="img/album3.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span>낙하</span>
+                <span id="song-name-3rd">낙하</span>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical fa-2x"
-                style="color: grey"
-              ></i>
+              <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </div>
-          <div class="song-card">
+          <div class="song-card" onclick="btnClickFourth()">
             <img class="album" src="img/album2.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span>Re-Bye</span>
+                <span id="song-name-4rd">Re-Bye</span>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical fa-2x"
-                style="color: grey"
-              ></i>
+              <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </div>
         </div>
-        <!-- 플레이버튼 -->
         <div id="play-button">
           <div class="playing-song-name">
-            <span id="play-song-name" value="insertSong()"></span>
+            <span id="play-song-name"></span>
           </div>
           <div class="play-button-menu">
             <i class="fa-solid fa-backward-step"></i>
@@ -124,36 +97,30 @@
         </div>
       </div>
     </div>
-    <!-- 오른쪽 카드  -->
     <div class="main-screen">
-      <header>
+      <div class="main-screen-header">
         <i class="fas fa-arrow-left"> </i>
         <i class="fa-solid fa-ellipsis-vertical" style="border: 5px"> </i>
-      </header>
-      <!-- 플레이 앨범 -->
+      </div>
       <div class="playing-screen">
         <img class="playing-album" src="img/album1.jpeg" />
       </div>
-      <!-- 재생 음악 이름 -->
       <div class="playing-music">
-        <h1>200%</h1>
+        <h1></h1>
       </div>
-      <!-- 재생 시간 -->
       <div class="play-range">
         <div class="play-time">
           <p>0:0</p>
           <p>3:00</p>
         </div>
-        <!-- 재생 bar -->
         <input class="music-range" type="range" min="0" max="164" value="0" />
       </div>
-      <!-- main screen 재생 버튼 -->
       <div class="main-play-button">
-        <i class="fa-solid fa-rotate-right fa-lg" style="color: grey"></i>
+        <i class="fa-solid fa-rotate-right fa-lg color-grey"></i>
         <i class="fa-solid fa-backward-step fa-lg"></i>
         <i class="fa-solid fa-circle-play fa-3x"></i>
         <i class="fa-solid fa-forward-step fa-lg"></i>
-        <i class="fa-solid fa-shuffle fa-lg" style="color: grey"></i>
+        <i class="fa-solid fa-shuffle fa-lg color-grey"></i>
       </div>
     </div>
     <script src="index.js"></script>
