@@ -18,8 +18,6 @@ function btn1Click(onclick) {
 // );
 
 // 음악 리스트 클릭 시... 화면에 음악이름 표출
-
-//test
 function btnClickFirst() {
   const selectedSongTitle = document.getElementById('song-name-1st').innerHTML;
   const playSongNameSpan = (document.querySelector(
