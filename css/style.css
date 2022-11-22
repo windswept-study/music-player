@@ -2,6 +2,7 @@
 @import 'common.css';
 @import 'animation.css';
 @import 'var-style.css';
+@import 'clicked.css';
 
 body {
   width: 100vw;
@@ -112,6 +113,8 @@ body {
   align-items: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 900;
+  background-color: white;
+  border: none;
 }
 .song-distance {
   display: flex;

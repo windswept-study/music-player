@@ -25,6 +25,30 @@ function buttonClick(id) {
   ).innerHTML = selectedSongTitle);
   const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
     selectedSongTitle);
-  console.log(playSongNameSpan);
-  console.log(playSongNameHead);
 }
+
+/*
+const songCard = document.getElementsByClassName('song-card');
+function cardClick(event) {
+  console.log(event.target);
+
+  console.log(event.target.classList);
+
+  if (event.target.classList[1] === 'clicked') {
+    event.target.classList.remove('clicked');
+  } else {
+    for (var i = 0; i < songCard.length; i++) {
+      songCard[i].classList.remove('clicked');
+    }
+    event.target.classList.add('clicked');
+  }
+}
+
+function init() {
+  for (var i = 0; i < songCard.length; i++) {
+    songCard[i].addEventListener('click', cardClick);
+  }
+}
+
+init();
+*/
