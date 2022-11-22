@@ -18,41 +18,8 @@ function btn1Click(onclick) {
 // );
 
 // 음악 리스트 클릭 시... 화면에 음악이름 표출
-function btnClickFirst() {
-  const selectedSongTitle = document.getElementById('song-name-1st').innerHTML;
-  const playSongNameSpan = (document.querySelector(
-    '.playing-song-name',
-  ).innerHTML = selectedSongTitle);
-  const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
-    selectedSongTitle);
-  console.log(playSongNameSpan);
-  console.log(playSongNameHead);
-}
-
-function btnClickSecond() {
-  const selectedSongTitle = document.getElementById('song-name-2nd').innerHTML;
-  const playSongNameSpan = (document.querySelector(
-    '.playing-song-name',
-  ).innerHTML = selectedSongTitle);
-  const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
-    selectedSongTitle);
-  console.log(playSongNameSpan);
-  console.log(playSongNameHead);
-}
-
-function btnClickThird() {
-  const selectedSongTitle = document.getElementById('song-name-3rd').innerHTML;
-  const playSongNameSpan = (document.querySelector(
-    '.playing-song-name',
-  ).innerHTML = selectedSongTitle);
-  const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
-    selectedSongTitle);
-  console.log(playSongNameSpan);
-  console.log(playSongNameHead);
-}
-
-function btnClickFourth() {
-  const selectedSongTitle = document.getElementById('song-name-4rd').innerHTML;
+function buttonClick(id) {
+  const selectedSongTitle = document.getElementById(id).innerHTML;
   const playSongNameSpan = (document.querySelector(
     '.playing-song-name',
   ).innerHTML = selectedSongTitle);
