@@ -25,7 +25,38 @@ function buttonClick(id) {
   ).innerHTML = selectedSongTitle);
   const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
     selectedSongTitle);
-
-  //const selectedSongCard = document.querySelector('.song-card').style;
-  //버튼 클릭은 어뜨케하는 것일까.....
 }
+
+//좋아요클릭
+function heartClick(event) {
+  const element = document.getElementById('likes');
+  element.style.cssText = 'color: rgb(238, 76, 103)';
+  element.style.fontWeight = 'bold';
+}
+
+/* 재클릭시 볼드 사라지기...
+const likes = document.getElementById('likes');
+
+function handleClick(event) {
+  console.log(event.target);
+  console.log(event.target.classList);
+
+  if (event.target.classList[1] === 'clicked') {
+    event.target.classList.remove('clicked');
+  } else {
+    for (var i = 0; i < likes.length; i++) {
+      likes[i].classList.remove('clicked');
+    }
+    event.target.classList.add('clicked');
+  }
+}
+
+function init() {
+  for (var i = 0; i < likes.length; i++) {
+    likes[i].addEventListener('clicked, handleClick');
+  }
+}
+init();
+*/
+//const selectedSongCard = document.querySelector('.song-card').style;
+//버튼 클릭은 어뜨케하는 것일까.....

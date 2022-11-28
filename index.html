@@ -35,13 +35,17 @@
           <button class="shuffle">
             <i class="fa-solid fa-shuffle"></i> shuffle
           </button>
-          <button class="likes" type="button">
+          <button id="likes" onclick="heartClick()">
             <i class="fa-solid fa-heart"></i>
             43.5M
           </button>
         </div>
         <div id="song-list">
-          <button class="song-card" onclick="buttonClick('song-name1')">
+          <button
+            class="song-card"
+            onclick="buttonClick('song-name1')"
+            onclick="swapImage('album')"
+          >
             <img class="album" src="/img/album1.jpeg" />
             <div class="song-distance">
               <div class="song-info">

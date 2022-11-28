@@ -6,9 +6,3 @@ button,
 i {
   cursor: pointer;
 }
-
-button:focus {
-  background-color: rgb(230, 230, 230);
-  box-shadow: 1px;
-  border-radius: 15px;
-}
