@@ -3,9 +3,12 @@
   border-radius: 15px;
 }
 
-.clicked {
-  font-weight: 900;
+.red {
   color: rgb(238, 76, 103);
+  font-weight: bold;
+}
+.black {
+  color: black;
 }
 
 /* 버튼을 나눠야함... shuffle - likes - songlist */

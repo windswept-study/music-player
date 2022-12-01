@@ -17,46 +17,33 @@ function btn1Click(onclick) {
 // document.getElementsByClassName('songName').innerHTML,
 // );
 
-// 음악 리스트 클릭 시... 화면에 음악이름 표출
-function buttonClick(id) {
+// 음악 리스트 클릭 시... 화면에 음악이름 및 앨범사진 표출
+function buttonClick(id, imgId) {
+  // 음악 이름 변경
   const selectedSongTitle = document.getElementById(id).innerHTML;
   const playSongNameSpan = (document.querySelector(
     '.playing-song-name',
   ).innerHTML = selectedSongTitle);
   const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
     selectedSongTitle);
+  // 음악 사진 변경
+  const selectedSongPicture = document.getElementById(imgId).src;
+  console.log('img Src =' + selectedSongPicture);
+  const playMusicPicture = (document.querySelector('#playing-album').src =
+    selectedSongPicture);
 }
 
 //좋아요클릭
-function heartClick(event) {
-  const element = document.getElementById('likes');
-  element.style.cssText = 'color: rgb(238, 76, 103)';
-  element.style.fontWeight = 'bold';
-}
 
-/* 재클릭시 볼드 사라지기...
-const likes = document.getElementById('likes');
-
-function handleClick(event) {
-  console.log(event.target);
-  console.log(event.target.classList);
-
-  if (event.target.classList[1] === 'clicked') {
-    event.target.classList.remove('clicked');
-  } else {
-    for (var i = 0; i < likes.length; i++) {
-      likes[i].classList.remove('clicked');
+const heartCount = document.getElementById('hearts');
+function heartClick() {
+  for (var i = 0; i < heartCount.classList.length; i++) {
+    if (heartCount.classList[i].indexOf('black') >= 0) {
+      heartCount.classList.remove('black');
+      heartCount.classList.add('red');
+    } else {
+      heartCount.classList.remove('red');
+      heartCount.classList.add('black');
     }
-    event.target.classList.add('clicked');
   }
 }
-
-function init() {
-  for (var i = 0; i < likes.length; i++) {
-    likes[i].addEventListener('clicked, handleClick');
-  }
-}
-init();
-*/
-//const selectedSongCard = document.querySelector('.song-card').style;
-//버튼 클릭은 어뜨케하는 것일까.....

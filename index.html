@@ -37,16 +37,15 @@
           </button>
           <button id="likes" onclick="heartClick()">
             <i class="fa-solid fa-heart"></i>
-            43.5M
+            <span class="black" id="hearts">43.5M</span>
           </button>
         </div>
         <div id="song-list">
           <button
             class="song-card"
-            onclick="buttonClick('song-name1')"
-            onclick="swapImage('album')"
+            onclick="buttonClick('song-name1','album1')"
           >
-            <img class="album" src="/img/album1.jpeg" />
+            <img id="album1" src="/img/album1.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
@@ -56,8 +55,11 @@
             </div>
           </button>
 
-          <button class="song-card" onclick="buttonClick('song-name2')">
-            <img class="album" src="img/album4.jpeg" />
+          <button
+            class="song-card"
+            onclick="buttonClick('song-name2', 'album2')"
+          >
+            <img id="album2" src="img/album4.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
@@ -66,8 +68,11 @@
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </button>
-          <button class="song-card" onclick="buttonClick('song-name3')">
-            <img class="album" src="img/album3.jpeg" />
+          <button
+            class="song-card"
+            onclick="buttonClick('song-name3', 'album3')"
+          >
+            <img id="album3" src="img/album3.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
@@ -76,8 +81,11 @@
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </button>
-          <button class="song-card" onclick="buttonClick('song-name4')">
-            <img class="album" src="img/album2.jpeg" />
+          <button
+            class="song-card"
+            onclick="buttonClick('song-name4', 'album4')"
+          >
+            <img id="album4" src="img/album2.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
@@ -105,7 +113,7 @@
         <i class="fa-solid fa-ellipsis-vertical" style="border: 5px"> </i>
       </div>
       <div class="playing-screen">
-        <img class="playing-album" src="img/album1.jpeg" />
+        <img id="playing-album" src="/img/music-ready.png" />
       </div>
       <div class="playing-music">
         <h1>노래를 선택해주세요 ^_^</h1>
