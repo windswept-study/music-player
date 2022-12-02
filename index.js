@@ -18,19 +18,16 @@ function btn1Click(onclick) {
 // );
 
 // 음악 리스트 클릭 시... 화면에 음악이름 및 앨범사진 표출
-function buttonClick(id, imgId) {
+function handleSongCardClick(songName, imgSrc) {
   // 음악 이름 변경
-  const selectedSongTitle = document.getElementById(id).innerHTML;
-  const playSongNameSpan = (document.querySelector(
-    '.playing-song-name',
-  ).innerHTML = selectedSongTitle);
-  const playSongNameHead = (document.querySelector('.playing-music').innerHTML =
-    selectedSongTitle);
+  const selectedSongTitle = (document.getElementsByTagName(songName).innerHTML =
+    songName);
+  document.querySelector('.playing-music').innerHTML = selectedSongTitle;
+  document.querySelector('.playing-song-name').innerHTML = selectedSongTitle;
   // 음악 사진 변경
-  const selectedSongPicture = document.getElementById(imgId).src;
-  console.log('img Src =' + selectedSongPicture);
-  const playMusicPicture = (document.querySelector('#playing-album').src =
-    selectedSongPicture);
+  const selectedSongPicture = (document.getElementsByTagName(imgSrc).src =
+    imgSrc);
+  document.querySelector('#playing-album').src = selectedSongPicture;
 }
 
 //좋아요클릭
