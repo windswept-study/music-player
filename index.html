@@ -35,55 +35,70 @@
           <button class="shuffle">
             <i class="fa-solid fa-shuffle"></i> shuffle
           </button>
-          <a href="#">
-            <button class="likes">
-              <i class="fa-solid fa-heart"></i>
-              43.5M
-            </button>
-          </a>
+          <button id="likes" onclick="handleHeartClick()">
+            <i class="fa-solid fa-heart"></i>
+            <span class="black" id="hearts">43.5M</span>
+          </button>
         </div>
         <div id="song-list">
-          <div class="song-card" onclick="btnClickFirst()">
-            <img class="album" src="/img/album1.jpeg" />
+          <button
+            class="song-card"
+            onclick="handleSongCardClick('200%','/img/album1.jpeg', '200percent')"
+          >
+            <audio src="/music/200percent.mp3" id="200percent"></audio>
+            <img id="album1" src="/img/album1.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span id="song-name-1st">200%</span>
+                <span id="song-name1">200%</span>
               </div>
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
-          </div>
+          </button>
 
-          <div class="song-card" onclick="btnClickSecond()">
-            <img class="album" src="img/album4.jpeg" />
+          <button
+            class="song-card"
+            onclick="handleSongCardClick('오랜 날 오랜 밤', 'img/album4.jpeg', 'longDay')"
+          >
+            <audio src="/music/오랜날오랜밤.mp3" id="longDay"></audio>
+            <img id="album2" src="img/album4.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span id="song-name-2nd">오랜 날 오랜 밤</span>
+                <span id="song-name2">오랜 날 오랜 밤</span>
               </div>
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
-          </div>
-          <div class="song-card" onclick="btnClickThird()">
-            <img class="album" src="img/album3.jpeg" />
+          </button>
+          <button
+            class="song-card"
+            onclick="handleSongCardClick('낙하', 'img/album3.jpeg', 'fallDown')"
+          >
+            <audio src="/music/낙하.mp3" id="fallDown"></audio>
+
+            <img id="album3" src="img/album3.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span id="song-name-3rd">낙하</span>
+                <span id="song-name3">낙하</span>
               </div>
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
-          </div>
-          <div class="song-card" onclick="btnClickFourth()">
-            <img class="album" src="img/album2.jpeg" />
+          </button>
+          <button
+            class="song-card"
+            onclick="handleSongCardClick('Re-Bye', 'img/album2.jpeg', 'reBye')"
+          >
+            <audio src="/music/RE-BYE.mp3" id="reBye"></audio>
+            <img id="album4" src="img/album2.jpeg" />
             <div class="song-distance">
               <div class="song-info">
                 <p>AKMU</p>
-                <span id="song-name-4rd">Re-Bye</span>
+                <span id="song-name4">Re-Bye</span>
               </div>
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
-          </div>
+          </button>
         </div>
         <div id="play-button">
           <div class="playing-song-name">
@@ -103,10 +118,10 @@
         <i class="fa-solid fa-ellipsis-vertical" style="border: 5px"> </i>
       </div>
       <div class="playing-screen">
-        <img class="playing-album" src="img/album1.jpeg" />
+        <img id="playing-album" src="/img/music-ready.png" />
       </div>
       <div class="playing-music">
-        <h1></h1>
+        <h1>노래를 선택해주세요 ^_^</h1>
       </div>
       <div class="play-range">
         <div class="play-time">

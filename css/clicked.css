@@ -1,0 +1,12 @@
+#song-list button:focus {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15%);
+  border-radius: 15px;
+}
+
+.red {
+  color: rgb(238, 76, 103);
+  font-weight: bold;
+}
+.black {
+  color: black;
+}
