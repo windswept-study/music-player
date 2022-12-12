@@ -20,6 +20,8 @@
   </head>
 
   <body>
+    <audio id="audioSource" src=""></audio>
+
     <div class="list-screen">
       <div class="list-screen-header">
         <i class="fas fa-arrow-left"> </i>
@@ -45,7 +47,6 @@
             class="song-card"
             onclick="handleSongCardClick('200%','/img/album1.jpeg', '200percent')"
           >
-            <audio src="/music/200percent.mp3" id="200percent"></audio>
             <img id="album1" src="/img/album1.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -58,9 +59,8 @@
 
           <button
             class="song-card"
-            onclick="handleSongCardClick('오랜 날 오랜 밤', 'img/album4.jpeg', 'longDay')"
+            onclick="handleSongCardClick('오랜 날 오랜 밤', 'img/album4.jpeg', 1)"
           >
-            <audio src="/music/오랜날오랜밤.mp3" id="longDay"></audio>
             <img id="album2" src="img/album4.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -74,8 +74,6 @@
             class="song-card"
             onclick="handleSongCardClick('낙하', 'img/album3.jpeg', 'fallDown')"
           >
-            <audio src="/music/낙하.mp3" id="fallDown"></audio>
-
             <img id="album3" src="img/album3.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -89,7 +87,6 @@
             class="song-card"
             onclick="handleSongCardClick('Re-Bye', 'img/album2.jpeg', 'reBye')"
           >
-            <audio src="/music/RE-BYE.mp3" id="reBye"></audio>
             <img id="album4" src="img/album2.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -132,9 +129,9 @@
       </div>
       <div class="main-play-button">
         <i class="fa-solid fa-rotate-right fa-lg color-grey"></i>
-        <i class="fa-solid fa-backward-step fa-lg"></i>
+        <i id="before-song-button" class="fa-solid fa-backward-step fa-lg"></i>
         <i class="fa-solid fa-circle-play fa-3x"></i>
-        <i class="fa-solid fa-forward-step fa-lg"></i>
+        <i id="next-song-button" class="fa-solid fa-forward-step fa-lg"></i>
         <i class="fa-solid fa-shuffle fa-lg color-grey"></i>
       </div>
     </div>
