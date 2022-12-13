@@ -43,10 +43,7 @@
           </button>
         </div>
         <div id="song-list">
-          <button
-            class="song-card"
-            onclick="handleSongCardClick('200%','/img/album1.jpeg', '200percent')"
-          >
+          <button class="song-card">
             <img id="album1" src="/img/album1.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -57,10 +54,7 @@
             </div>
           </button>
 
-          <button
-            class="song-card"
-            onclick="handleSongCardClick('오랜 날 오랜 밤', 'img/album4.jpeg', 1)"
-          >
+          <button class="song-card">
             <img id="album2" src="img/album4.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -70,10 +64,7 @@
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </button>
-          <button
-            class="song-card"
-            onclick="handleSongCardClick('낙하', 'img/album3.jpeg', 'fallDown')"
-          >
+          <button class="song-card">
             <img id="album3" src="img/album3.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -83,10 +74,7 @@
               <i class="fa-solid fa-ellipsis-vertical fa-2x color-grey"></i>
             </div>
           </button>
-          <button
-            class="song-card"
-            onclick="handleSongCardClick('Re-Bye', 'img/album2.jpeg', 'reBye')"
-          >
+          <button class="song-card">
             <img id="album4" src="img/album2.jpeg" />
             <div class="song-distance">
               <div class="song-info">
@@ -118,20 +106,20 @@
         <img id="playing-album" src="/img/music-ready.png" />
       </div>
       <div class="playing-music">
-        <h1>노래를 선택해주세요 ^_^</h1>
+        <h1 id="main-song-title">노래를 선택해주세요 ^_^</h1>
       </div>
       <div class="play-range">
         <div class="play-time">
-          <p>0:0</p>
-          <p>3:00</p>
+          <p id="music-current-time">0:00</p>
+          <p id="music-finish-time">3:00</p>
         </div>
         <input class="music-range" type="range" min="0" max="164" value="0" />
       </div>
       <div class="main-play-button">
         <i class="fa-solid fa-rotate-right fa-lg color-grey"></i>
-        <i id="before-song-button" class="fa-solid fa-backward-step fa-lg"></i>
+        <i class="fa-solid fa-backward-step fa-lg"></i>
         <i class="fa-solid fa-circle-play fa-3x"></i>
-        <i id="next-song-button" class="fa-solid fa-forward-step fa-lg"></i>
+        <i class="fa-solid fa-forward-step fa-lg"></i>
         <i class="fa-solid fa-shuffle fa-lg color-grey"></i>
       </div>
     </div>
