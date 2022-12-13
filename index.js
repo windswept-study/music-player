@@ -14,7 +14,7 @@ const mp3Array = [
 const i = 0;
 
 const playButton = document.querySelector('.fa-circle-play');
-//const stopButton = document.querySelector('.fa-circle-stop');
+const stopButton = document.querySelector('.fa-circle-stop');
 const nextSongButton = document.querySelector('.fa-backward-step');
 const beforeSongButton = document.querySelector('.fa-forward-step');
 const handleSongCardClick = document.querySelector('.song-card');
@@ -28,16 +28,25 @@ beforeSongButton.addEventListener('click', beforeAudio);
 handleSongCardClick.addEventListener('click', selectAudio);
 
 function playAudio() {
+  document.querySelector('.fa-circle-play').innerHTML = stopButton;
   const musicSource = document.querySelector('#audioSource');
-  console.log(musicSource);
   musicSource.src = mp3Array[i];
   musicSource.play();
 }
+
+function stopAudio() {
+  document.querySelector('.fa-circle-stop').innerHTML = playButton;
+  playAudio.pause();
+}
+
 function selectAudio() {
   document.querySelector('.playing-music').innerHTML = songNameList[i];
   document.querySelector('.playing-song-name').innerHTML = songNameList[i];
   document.querySelector('#playing-album').src = albumImageList[i];
   playAudio(mp3Array[i]);
+  console.log(songNameList[i]);
+  console.log(albumImageList[i]);
+  console.log(mp3Array[i]);
 }
 
 function nextAudio() {
